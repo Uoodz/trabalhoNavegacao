@@ -1,2 +1,0 @@
-# trabalhoNavegacao
-Desafio de Navegação
