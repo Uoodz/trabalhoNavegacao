@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         width: 200,
         alignSelf: 'center',
         justifyContent: 'center',
+        borderRadius: 25,
     },
 
     linha: {

@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import NoticiasScreen from './screens/noticiasScreen';
 import SobreScreen from './screens/sobreScreen';
+import { Ionicons } from '@expo/vector-icons';
 
 const Drawer = createDrawerNavigator();
 
@@ -10,8 +11,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator screenOptions={{headerTitleAlign: 'center'}}>
-        <Drawer.Screen name='Noticias' component={NoticiasScreen}/>
-        <Drawer.Screen name='Sobre' component={SobreScreen}/>
+        <Drawer.Screen name='Noticias' component={NoticiasScreen} options={{drawerIcon: () => <Ionicons name="newspaper-outline" size={25} />}}/>
+        <Drawer.Screen name='Sobre' component={SobreScreen} options={{drawerIcon: () => <Ionicons name="help-circle-outline" size={25} />}}/>
       </Drawer.Navigator>
     </NavigationContainer>
   )

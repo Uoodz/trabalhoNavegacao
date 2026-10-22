@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 export default function Cards(props) {
     return (
-        <View style={styles.viewCards}>
-            <Text style={styles.tituloSecundario}>Tecnologia</Text>
+        <TouchableOpacity style={styles.viewCards} onPress={props.onPress}>
+            <Text style={styles.tituloSecundario}>{props.tipo}</Text>
             <Text style={{marginLeft: 10, fontWeight: 'bold', fontSize: 17, padding: 5}}>{props.titulos}</Text>
             <Text style={styles.conteudo}>{props.descricao}</Text>
-        </View>
+        </TouchableOpacity>
     );
 }
 
@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#e0e0e0',
         marginTop: 20,
         borderRadius: 10,
+        width: '99%',
   },
 
     tituloSecundario: {
